@@ -352,11 +352,11 @@ body::before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* Always cover the viewport: use whichever dimension is larger */
-  width: 177.78vh;   /* 100vh * (16/9) */
-  height: 100vh;
-  min-width: 100%;
-  min-height: 56.25vw; /* 100vw * (9/16) */
+  /* Always cover the viewport while maintaining 16:9 aspect ratio */
+  width: 100vw;
+  height: 56.25vw;     /* 100vw * (9/16) */
+  min-width: 177.78vh; /* 100vh * (16/9) */
+  min-height: 100vh;
   border: none;
   pointer-events: none;
 }
